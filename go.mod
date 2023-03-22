@@ -1,4 +1,4 @@
-module github.com/takiAA/ethgo
+module github.com/umbracle/ethgo
 
 go 1.18
 
@@ -12,7 +12,6 @@ require (
 	github.com/ory/dockertest v3.3.5+incompatible
 	github.com/stretchr/testify v1.4.0
 	github.com/tyler-smith/go-bip39 v1.1.0
-	github.com/umbracle/ethgo v0.1.3
 	github.com/umbracle/fastrlp v0.0.0-20220527094140-59d5dd30e722
 	github.com/valyala/fasthttp v1.4.0
 	github.com/valyala/fastjson v1.4.1
@@ -31,11 +30,12 @@ require (
 	github.com/davecgh/go-spew v1.1.1 // indirect
 	github.com/docker/go-connections v0.4.0 // indirect
 	github.com/docker/go-units v0.4.0 // indirect
+	github.com/google/go-cmp v0.5.9 // indirect
 	github.com/google/gofuzz v1.2.0 // indirect
+	github.com/gotestyourself/gotestyourself v2.2.0+incompatible // indirect
 	github.com/klauspost/compress v1.4.1 // indirect
 	github.com/klauspost/cpuid v1.2.0 // indirect
 	github.com/konsorten/go-windows-terminal-sequences v1.0.1 // indirect
-	github.com/kr/text v0.1.0 // indirect
 	github.com/opencontainers/go-digest v1.0.0-rc1 // indirect
 	github.com/opencontainers/image-spec v1.0.1 // indirect
 	github.com/opencontainers/runc v0.1.1 // indirect
@@ -45,5 +45,7 @@ require (
 	github.com/valyala/bytebufferpool v1.0.0 // indirect
 	golang.org/x/net v0.0.0-20190813141303-74dc4d7220e7 // indirect
 	golang.org/x/sys v0.0.0-20200923182605-d9f96fdee20d // indirect
+	google.golang.org/appengine v1.6.7 // indirect
 	gopkg.in/yaml.v2 v2.2.2 // indirect
+	gotest.tools v2.2.0+incompatible // indirect
 )
