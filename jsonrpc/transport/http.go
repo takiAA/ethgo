@@ -2,9 +2,12 @@ package transport
 
 import (
 	"encoding/json"
+	"net/url"
+	"os"
 
 	"github.com/umbracle/ethgo/jsonrpc/codec"
 	"github.com/valyala/fasthttp"
+	"github.com/valyala/fasthttp/fasthttpproxy"
 )
 
 // HTTP is an http transport
@@ -15,6 +18,17 @@ type HTTP struct {
 }
 
 func newHTTP(addr string, headers map[string]string) *HTTP {
+	httpsProxy := os.Getenv(`https_proxy`)
+	if httpsProxy != "" {
+		proxyURL, _ := url.Parse(httpsProxy)
+		return &HTTP{
+			addr: addr,
+			client: &fasthttp.Client{
+				Dial: fasthttpproxy.FasthttpSocksDialer(proxyURL.Host),
+			},
+			headers: headers,
+		}
+	}
 	return &HTTP{
 		addr:    addr,
 		client:  &fasthttp.Client{},
